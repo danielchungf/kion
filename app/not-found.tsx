@@ -1,19 +1,22 @@
 import Link from "next/link";
+import PageLayout from "@/components/PageLayout";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-8">Recipe not found</p>
-        <Link
-          href="/"
-          className="inline-block px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
-        >
-          Back to Recipes
-        </Link>
-      </div>
-    </div>
+    <PageLayout activePage="index">
+      <h1 className="font-young-serif font-medium text-neutral-800 mb-6 text-[36px] md:text-6xl">
+        Recipe not found
+      </h1>
+      <p className="font-source-serif text-[16px] tracking-tight text-neutral-700 mb-8">
+        We couldn't find that recipe. It may have been moved or doesn't exist
+        yet.
+      </p>
+      <Link
+        href="/"
+        className="font-young-serif font-medium text-xl text-neutral-800 hover:text-neutral-950 transition-colors"
+      >
+        Back to Index
+      </Link>
+    </PageLayout>
   );
 }
-
