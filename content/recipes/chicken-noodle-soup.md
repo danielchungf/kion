@@ -7,12 +7,12 @@ servings: 4
 prepTime: "10 min"
 cookTime: "25 min"
 ingredientImages:
-  - /carrot.png
-  - /potato.png
-  - /cellery.png
-  - /ginger.png
-  - /red-onion.png
-  - /parsley.png
+  - /ingredients/carrot.webp
+  - /ingredients/potato.webp
+  - /ingredients/cellery.webp
+  - /ingredients/ginger.webp
+  - /ingredients/red-onion.webp
+  - /ingredients/parsley.webp
 ---
 
 ## Ingredients
