@@ -1,4 +1,4 @@
-# 🧄 Garlic
+# Kion
 
 A curated recipe collection for family and friends. View and browse through a collection of curated recipes.
 
@@ -33,7 +33,7 @@ npm run dev
 ## Project Structure
 
 ```
-garlic/
+kion/
 ├── app/
 │   ├── layout.tsx          # Root layout
 │   ├── page.tsx            # Recipe list page

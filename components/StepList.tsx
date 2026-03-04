@@ -1,3 +1,5 @@
+import { typography } from "@/lib/tokens";
+
 interface StepListProps {
   steps: string[];
 }
@@ -8,7 +10,7 @@ export default function StepList({ steps }: StepListProps) {
       {steps.map((step, index) => (
         <p
           key={index}
-          className="font-source-serif text-neutral-700 text-[16px] tracking-tight leading-relaxed"
+          className={typography.body}
         >
           {step}
         </p>

@@ -90,8 +90,20 @@ const youngSerif = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Garlic - Family Recipes",
+  title: "Kion - Family Recipes",
   description: "A curated collection of family recipes",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: 'Kion',
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
 import IngredientImageCarousel from "@/components/IngredientImageCarousel";
 import StepList from "@/components/StepList";
+import { typography, spacing } from "@/lib/tokens";
 
 interface RecipePageProps {
   params: {
@@ -20,7 +21,7 @@ export default function RecipePage({ params }: RecipePageProps) {
   return (
     <PageLayout>
       <div className="max-w-[720px] mx-auto">
-        <h1 className="font-young-serif font-medium text-neutral-800 mb-10 text-[36px] md:text-6xl">
+        <h1 className={`${typography.h1} mb-5`}>
           {recipe.frontmatter.title}
         </h1>
 
@@ -28,12 +29,12 @@ export default function RecipePage({ params }: RecipePageProps) {
           images={recipe.frontmatter.ingredientImages || []}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[120px]">
+        <div className={`grid grid-cols-1 md:grid-cols-[1fr_2fr] ${spacing.twoColumnGap}`}>
           <section>
-            <h2 className="font-young-serif font-medium text-neutral-800 mb-5 text-xl">
+            <h2 className={`${typography.h2} mb-5`}>
               Ingredients
             </h2>
-            <ul className="space-y-1 font-source-serif text-[16px] tracking-tight text-neutral-700">
+            <ul className={`space-y-1 ${typography.body}`}>
               {recipe.ingredients.map((ingredient, index) => (
                 <li key={index} className="flex items-start">
                   <span>{ingredient}</span>
@@ -43,7 +44,7 @@ export default function RecipePage({ params }: RecipePageProps) {
           </section>
 
           <section>
-            <h2 className="font-young-serif font-medium text-neutral-800 mb-5 text-xl">
+            <h2 className={`${typography.h2} mb-5`}>
               Preparation
             </h2>
             <StepList steps={recipe.instructions} />

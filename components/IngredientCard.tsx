@@ -1,3 +1,5 @@
+import { typography } from "@/lib/tokens";
+
 interface IngredientCardProps {
   name: string;
   image?: string;
@@ -17,7 +19,7 @@ export default function IngredientCard({ name, image }: IngredientCardProps) {
           <span className="text-4xl">🍽️</span>
         )}
       </div>
-      <span className="font-young-serif font-medium text-xl text-neutral-800 text-center">
+      <span className={`${typography.h2} text-center`}>
         {name}
       </span>
     </div>

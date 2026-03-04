@@ -5,6 +5,7 @@ import { ingredients, categories } from "@/lib/ingredients";
 import PageLayout from "@/components/PageLayout";
 import CategoryFilterPills from "@/components/CategoryFilterPills";
 import IngredientCard from "@/components/IngredientCard";
+import { typography, spacing } from "@/lib/tokens";
 
 export default function IngredientsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -16,7 +17,7 @@ export default function IngredientsPage() {
 
   return (
     <PageLayout activePage="ingredients">
-      <h1 className="font-young-serif font-medium text-neutral-800 mb-14 text-[36px] md:text-6xl">
+      <h1 className={`${typography.h1} ${spacing.headingMb}`}>
         Ingredients
       </h1>
 
@@ -29,7 +30,7 @@ export default function IngredientsPage() {
       </div>
 
       <div
-        className="grid justify-between gap-y-[40px] -mx-[35px]"
+        className={`grid justify-between ${spacing.ingredientGridGap} -mx-[35px]`}
         style={{ gridTemplateColumns: "repeat(auto-fill, 175px)" }}
       >
         {filteredIngredients.map((ingredient) => (

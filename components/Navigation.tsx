@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { typography, colors, spacing } from "@/lib/tokens";
 
 interface NavigationProps {
   activePage?: "index" | "ingredients";
@@ -11,12 +13,16 @@ export default function Navigation({ activePage }: NavigationProps) {
   ];
 
   return (
-    <nav className="mb-[100px]">
-      <div className="flex gap-12">
+    <nav className={spacing.navMb}>
+      <div className="flex items-center gap-10">
+        <Link href="/">
+          <Image src="/kion-logo.png" alt="Kion" width={40} height={40} />
+        </Link>
+        <div className="flex gap-6">
         {navItems.map((item) => {
           const isActive = activePage === item.key;
-          const colorClass = isActive ? "text-neutral-950" : "text-neutral-500";
-          const baseClass = `font-young-serif font-medium text-xl ${colorClass}`;
+          const colorClass = isActive ? colors.text.active : colors.text.muted;
+          const baseClass = `${typography.navLink} ${colorClass}`;
 
           return isActive ? (
             <button key={item.key} className={baseClass}>
@@ -28,6 +34,7 @@ export default function Navigation({ activePage }: NavigationProps) {
             </Link>
           );
         })}
+        </div>
       </div>
     </nav>
   );
