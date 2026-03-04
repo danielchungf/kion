@@ -14,15 +14,16 @@ export const colors = {
 export const typography = {
   h1: `font-young-serif font-medium text-[36px] md:text-6xl ${colors.text.primary}`,
   h2: `font-young-serif font-medium text-xl ${colors.text.primary}`,
+  h3: "font-young-serif font-medium text-[18px]",
   navLink: "font-young-serif font-medium text-xl",
   body: `font-source-serif text-[16px] tracking-tight ${colors.text.body} leading-relaxed`,
   filterPill: "font-young-serif font-medium text-lg",
 } as const;
 
 export const spacing = {
-  page: "px-5 md:px-[90px] py-[60px]",
-  navMb: "mb-[100px]",
-  headingMb: "mb-14",
+  page: "px-5 py-5 md:pb-[60px]",
+  navMb: "mb-10 md:mb-[100px]",
+  headingMb: "mb-5 md:mb-14",
   twoColumnGap: "gap-[30px] md:gap-[120px]",
   recipeGridGap: "gap-x-12 gap-y-2",
   ingredientGridGap: "gap-y-[40px]",

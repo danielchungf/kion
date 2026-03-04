@@ -1,5 +1,7 @@
 "use client";
 
+import { typography, colors } from "@/lib/tokens";
+
 interface CategoryFilterPillsProps {
   categories: string[];
   selected: string;
@@ -17,10 +19,10 @@ export default function CategoryFilterPills({
         <button
           key={category}
           onClick={() => onSelect(category)}
-          className={`font-young-serif font-medium text-lg ${
+          className={`${typography.h3} ${
             selected === category
-              ? "text-neutral-950 underline underline-offset-[8px]"
-              : "text-neutral-500"
+              ? `${colors.text.active} underline underline-offset-[8px]`
+              : colors.text.muted
           }`}
         >
           {category}

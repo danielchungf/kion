@@ -1,6 +1,7 @@
 import { getAllRecipes } from "@/lib/recipes";
 import PageLayout from "@/components/PageLayout";
 import RecipeListItem from "@/components/RecipeListItem";
+import { typography, spacing } from "@/lib/tokens";
 
 export default function Home() {
   const recipes = getAllRecipes();
@@ -16,16 +17,18 @@ export default function Home() {
 
   return (
     <PageLayout activePage="index">
-      <h1 className="font-young-serif font-medium text-neutral-800 mb-14 text-[36px] md:text-6xl">
+      <div className="max-w-[720px] mx-auto">
+      <h1 className={`${typography.h1} ${spacing.headingMb} hidden md:block`}>
         Index
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+      <div className={`grid grid-cols-1 md:grid-cols-2 ${spacing.recipeGridGap} text-center md:text-left`}>
         <div className="flex flex-col gap-y-2">
           {firstColumn.map((recipe) => (
             <RecipeListItem
               key={recipe.frontmatter.id}
               id={recipe.frontmatter.id}
               title={recipe.frontmatter.title}
+              hasContent={recipe.ingredients.length > 0}
             />
           ))}
         </div>
@@ -35,9 +38,11 @@ export default function Home() {
               key={recipe.frontmatter.id}
               id={recipe.frontmatter.id}
               title={recipe.frontmatter.title}
+              hasContent={recipe.ingredients.length > 0}
             />
           ))}
         </div>
+      </div>
       </div>
     </PageLayout>
   );
