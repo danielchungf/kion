@@ -90,8 +90,12 @@ const youngSerif = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kion - Family Recipes",
-  description: "A curated collection of family recipes",
+  title: "Kion — Family Cookbook",
+  description: "A family's culinary legacy, preserved and shared.",
+  openGraph: {
+    title: "Kion — Family Cookbook",
+    description: "A family's culinary legacy, preserved and shared.",
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
