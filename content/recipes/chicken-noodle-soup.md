@@ -12,7 +12,7 @@ ingredientImages:
   - /ingredients/cellery.webp
   - /ingredients/ginger.webp
   - /ingredients/red-onion.webp
-  - /ingredients/parsley.webp
+  - /ingredients/cilantro.webp
 ---
 
 ## Ingredients
