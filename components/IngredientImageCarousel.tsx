@@ -16,7 +16,7 @@ export default function IngredientImageCarousel({
           key={index}
           src={image}
           alt=""
-          className="w-[110px] h-[110px] md:w-[150px] md:h-[150px] object-contain flex-shrink-0 -ml-[66px] first:ml-[-22px] md:-ml-[90px] md:first:ml-[-30px]"
+          className="w-[110px] h-[110px] md:w-[150px] md:h-[150px] object-contain flex-shrink-0 -ml-[66px] first:ml-[-22px] md:-ml-[80px] md:first:ml-[-30px]"
         />
       ))}
     </div>
