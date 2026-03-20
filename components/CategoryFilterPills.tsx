@@ -14,7 +14,7 @@ export default function CategoryFilterPills({
   onSelect,
 }: CategoryFilterPillsProps) {
   return (
-    <div className="flex gap-7">
+    <div className="flex gap-7 overflow-x-auto whitespace-nowrap no-scrollbar">
       {categories.map((category) => (
         <button
           key={category}

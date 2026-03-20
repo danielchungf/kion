@@ -29,7 +29,7 @@ export default function RecipePage({ params }: RecipePageProps) {
           images={recipe.frontmatter.ingredientImages || []}
         />
 
-        <div className={`grid grid-cols-1 md:grid-cols-[1fr_2fr] ${spacing.twoColumnGap}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-[2fr_3fr] ${spacing.twoColumnGap}`}>
           <section>
             <h2 className={`${typography.h2} mb-5`}>
               Ingredients
