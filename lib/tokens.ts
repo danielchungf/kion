@@ -24,7 +24,7 @@ export const spacing = {
   page: "px-5 py-5 md:pb-[60px]",
   navMb: "mb-10 md:mb-[100px]",
   headingMb: "mb-5 md:mb-14",
-  twoColumnGap: "gap-[30px] md:gap-[120px]",
+  twoColumnGap: "gap-[40px] md:gap-[80px]",
   recipeGridGap: "gap-x-12 gap-y-2",
   ingredientGridGap: "gap-y-[40px]",
 } as const;

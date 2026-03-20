@@ -19,7 +19,6 @@ export const ingredients: Ingredient[] = [
   { id: "6", name: "Celery", category: "Veggies", image: "/ingredients/cellery.webp" },
   { id: "7", name: "Limes", category: "Fruits", image: "/ingredients/limes.webp" },
   { id: "8", name: "Ginger", category: "Spices", image: "/ingredients/ginger.webp" },
-  { id: "9", name: "Parsley", category: "Spices", image: "/ingredients/parsley.webp" },
   {
     id: "10",
     name: "Red Onion",
@@ -46,6 +45,13 @@ export const ingredients: Ingredient[] = [
     category: "Condiments",
     image: "/ingredients/golden-curry.webp",
   },
+  { id: "16", name: "Ají Limo", category: "Spices", image: "/ingredients/aji-limo.webp" },
+  { id: "17", name: "Ají Panca", category: "Spices", image: "/ingredients/aji-panca.webp" },
+  { id: "18", name: "Garlic", category: "Veggies", image: "/ingredients/garlic.webp" },
+  { id: "19", name: "Short Ribs", category: "Protein", image: "/ingredients/short-ribs.webp" },
+  { id: "20", name: "Cilantro", category: "Spices", image: "/ingredients/cilantro.webp" },
+  { id: "21", name: "Squash", category: "Veggies", image: "/ingredients/squash.webp" },
+  { id: "22", name: "Beer", category: "Condiments", image: "/ingredients/beer.webp" },
 ];
 
 export const categories = [

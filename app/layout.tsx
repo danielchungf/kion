@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 // Import Source Serif Pro font family
@@ -117,7 +118,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sourceSerifPro.variable} ${youngSerif.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

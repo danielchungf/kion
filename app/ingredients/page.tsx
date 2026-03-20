@@ -30,8 +30,7 @@ export default function IngredientsPage() {
       </div>
 
       <div
-        className={`grid justify-between ${spacing.ingredientGridGap} -mx-[35px]`}
-        style={{ gridTemplateColumns: "repeat(auto-fill, 175px)" }}
+        className={`grid grid-cols-3 md:grid-cols-4 ${spacing.ingredientGridGap}`}
       >
         {filteredIngredients.map((ingredient) => (
           <IngredientCard

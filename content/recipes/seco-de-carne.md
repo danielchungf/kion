@@ -9,11 +9,11 @@ cookTime: ""
 ingredientImages:
   - /ingredients/aji-limo.webp
   - /ingredients/squash.webp
-  - /ingredients/short-ribs.webp
   - /ingredients/garlic.webp
-  - /ingredients/cilantro.webp
-  - /ingredients/red-onion.webp
   - /ingredients/aji-panca.webp
+  - /ingredients/short-ribs.webp
+  - /ingredients/red-onion.webp
+  - /ingredients/cilantro.webp
   - /ingredients/beer.webp
 ---
 
