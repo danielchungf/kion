@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getRecipeById } from "@/lib/recipes";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
@@ -8,6 +9,17 @@ import { typography, spacing } from "@/lib/tokens";
 interface RecipePageProps {
   params: {
     id: string;
+  };
+}
+
+export function generateMetadata({ params }: RecipePageProps): Metadata {
+  const recipe = getRecipeById(params.id);
+  if (!recipe) return {};
+  return {
+    title: `${recipe.frontmatter.title} — Kion`,
+    openGraph: {
+      title: recipe.frontmatter.title,
+    },
   };
 }
 

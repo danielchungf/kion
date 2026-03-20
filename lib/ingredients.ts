@@ -52,6 +52,10 @@ export const ingredients: Ingredient[] = [
   { id: "20", name: "Cilantro", category: "Spices", image: "/ingredients/cilantro.webp" },
   { id: "21", name: "Squash", category: "Veggies", image: "/ingredients/squash.webp" },
   { id: "22", name: "Beer", category: "Condiments", image: "/ingredients/beer.webp" },
+  { id: "23", name: "Whole Chicken", category: "Protein", image: "/ingredients/whole-chicken.webp" },
+  { id: "24", name: "Mustard", category: "Condiments", image: "/ingredients/mustard.webp" },
+  { id: "25", name: "Parsley", category: "Spices", image: "/ingredients/parsley.webp" },
+  { id: "26", name: "Red Wine Vinegar", category: "Condiments", image: "/ingredients/red-wine-vinegar.webp" },
 ];
 
 export const categories = [
