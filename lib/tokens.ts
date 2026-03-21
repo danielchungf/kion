@@ -6,7 +6,7 @@ export const colors = {
     muted: "text-neutral-500",
   },
   bg: {
-    page: "bg-white",
+    page: "bg-[#FBFAF5]",
     placeholder: "bg-neutral-100",
   },
 } as const;
@@ -26,5 +26,5 @@ export const spacing = {
   headingMb: "mb-5 md:mb-14",
   twoColumnGap: "gap-[40px] md:gap-[80px]",
   recipeGridGap: "gap-x-12 gap-y-2",
-  ingredientGridGap: "gap-y-[40px]",
+  ingredientGridGap: "gap-x-[20px] gap-y-[40px]",
 } as const;
