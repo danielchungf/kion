@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="p-7 text-center">
+    <footer className="py-7 px-5 md:max-w-[720px] md:mx-auto md:px-0 md:text-left text-center">
       <a
         href="https://danielchung.design"
         target="_blank"

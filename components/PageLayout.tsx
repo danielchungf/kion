@@ -9,12 +9,8 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children, activePage }: PageLayoutProps) {
   return (
-    <div className={`relative min-h-screen ${colors.bg.page} overflow-x-hidden`}>
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: "url('/watercolor-background.jpg')" }}
-      />
-      <div className={`relative ${spacing.page}`}>
+    <div className={`min-h-screen ${colors.bg.page} overflow-x-hidden`}>
+      <div className={spacing.page}>
         <Navigation activePage={activePage} />
         {children}
       </div>
