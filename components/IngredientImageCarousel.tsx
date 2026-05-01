@@ -10,7 +10,7 @@ export default function IngredientImageCarousel({
   }
 
   return (
-    <div className="mb-10 w-full flex items-center overflow-hidden">
+    <div className="mb-10 w-full flex items-center">
       {images.map((image, index) => (
         <img
           key={index}
