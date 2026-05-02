@@ -2,12 +2,12 @@ import Link from "next/link";
 import { typography, colors } from "@/lib/tokens";
 
 interface RecipeListItemProps {
-  id: string;
+  slug: string;
   title: string;
   hasContent?: boolean;
 }
 
-export default function RecipeListItem({ id, title, hasContent = true }: RecipeListItemProps) {
+export default function RecipeListItem({ slug, title, hasContent = true }: RecipeListItemProps) {
   if (!hasContent) {
     return (
       <span className={`${typography.navLink} ${colors.text.muted}`}>
@@ -18,7 +18,7 @@ export default function RecipeListItem({ id, title, hasContent = true }: RecipeL
 
   return (
     <Link
-      href={`/recipe/${id}`}
+      href={`/recipes/${slug}`}
       className={`${typography.h2} hover:${colors.text.active} transition-colors`}
     >
       {title}
