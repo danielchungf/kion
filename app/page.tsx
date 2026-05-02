@@ -26,7 +26,7 @@ export default function Home() {
           {firstColumn.map((recipe) => (
             <RecipeListItem
               key={recipe.frontmatter.id}
-              id={recipe.frontmatter.id}
+              slug={recipe.frontmatter.slug}
               title={recipe.frontmatter.title}
               hasContent={recipe.ingredients.length > 0}
             />
@@ -36,7 +36,7 @@ export default function Home() {
           {secondColumn.map((recipe) => (
             <RecipeListItem
               key={recipe.frontmatter.id}
-              id={recipe.frontmatter.id}
+              slug={recipe.frontmatter.slug}
               title={recipe.frontmatter.title}
               hasContent={recipe.ingredients.length > 0}
             />

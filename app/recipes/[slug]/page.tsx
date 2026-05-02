@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getRecipeById } from "@/lib/recipes";
+import { getRecipeBySlug } from "@/lib/recipes";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
 import IngredientImageCarousel from "@/components/IngredientImageCarousel";
@@ -8,12 +8,12 @@ import { typography, spacing } from "@/lib/tokens";
 
 interface RecipePageProps {
   params: {
-    id: string;
+    slug: string;
   };
 }
 
 export function generateMetadata({ params }: RecipePageProps): Metadata {
-  const recipe = getRecipeById(params.id);
+  const recipe = getRecipeBySlug(params.slug);
   if (!recipe) return {};
   return {
     title: `${recipe.frontmatter.title} — Kion`,
@@ -24,7 +24,7 @@ export function generateMetadata({ params }: RecipePageProps): Metadata {
 }
 
 export default function RecipePage({ params }: RecipePageProps) {
-  const recipe = getRecipeById(params.id);
+  const recipe = getRecipeBySlug(params.slug);
 
   if (!recipe) {
     notFound();

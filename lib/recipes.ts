@@ -52,7 +52,7 @@ export function getAllRecipes(): Recipe[] {
   });
 }
 
-export function getRecipeById(id: string): Recipe | undefined {
+export function getRecipeBySlug(slug: string): Recipe | undefined {
   const all = getAllRecipes();
-  return all.find((r) => r.frontmatter.id === id);
+  return all.find((r) => r.frontmatter.slug === slug);
 }

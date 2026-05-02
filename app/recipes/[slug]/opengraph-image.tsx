@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getRecipeById } from "@/lib/recipes";
+import { getRecipeBySlug } from "@/lib/recipes";
 import { readFile } from "fs/promises";
 import path from "path";
 import sharp from "sharp";
@@ -7,8 +7,8 @@ import sharp from "sharp";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default async function Image({ params }: { params: { id: string } }) {
-  const recipe = getRecipeById(params.id);
+export default async function Image({ params }: { params: { slug: string } }) {
+  const recipe = getRecipeBySlug(params.slug);
 
   if (!recipe) {
     return new ImageResponse(
