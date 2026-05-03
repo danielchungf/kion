@@ -13,7 +13,7 @@ ingredientImages:
   - /ingredients/yellow-onion.webp
   - /ingredients/eggs.webp
   - /ingredients/chicken-stock.webp
-  - /ingredients/chicken-breast.webp
+  - /ingredients/thin-sliced-chicken-breast.webp
   - /ingredients/tomato-paste.webp
   - /ingredients/breadcrumbs.webp
   - /ingredients/green-apple.webp
