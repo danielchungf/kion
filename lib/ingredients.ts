@@ -64,6 +64,7 @@ export const ingredients: Ingredient[] = [
   { id: "77", name: "Parmesan Cheese", category: "Dairy", image: "/ingredients/parmesan-cheese.webp" },
   { id: "25", name: "Parsley", category: "Aromatics", image: "/ingredients/parsley.webp" },
   { id: "84", name: "Passion Fruit", category: "Fruits", image: "/ingredients/passion-fruit.webp" },
+  { id: "101", name: "Peeled Wheat", category: "Grains", image: "/ingredients/peeled-wheat.webp" },
   { id: "36", name: "Pineapple", category: "Fruits", image: "/ingredients/pineapple.webp" },
   { id: "1", name: "Potato", category: "Vegetables", image: "/ingredients/potato.webp" },
   { id: "70", name: "Queso Fresco", category: "Dairy", image: "/ingredients/queso-fresco.webp" },

@@ -6,6 +6,7 @@ category: ""
 servings: 0
 prepTime: ""
 cookTime: ""
+author: "juan-andres-chung"
 ingredientImages:
   - /ingredients/soy-sauce.webp
   - /ingredients/whole-chicken.webp

@@ -6,6 +6,7 @@ category: ""
 servings: 0
 prepTime: ""
 cookTime: ""
+author: "daniel-chung"
 ingredientImages:
   - /ingredients/jalapeno.webp
   - /ingredients/bell-pepper-red.webp

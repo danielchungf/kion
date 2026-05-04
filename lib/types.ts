@@ -7,6 +7,7 @@ export interface RecipeFrontmatter {
   prepTime: string;
   cookTime: string;
   ingredientImages: string[];
+  author?: string;
 }
 
 export interface Recipe {
@@ -20,4 +21,10 @@ export interface Ingredient {
   name: string;
   category: string;
   image?: string;
+}
+
+export interface Author {
+  id: string;
+  name: string;
+  avatar: string;
 }

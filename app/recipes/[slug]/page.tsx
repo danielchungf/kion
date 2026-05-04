@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getRecipeBySlug } from "@/lib/recipes";
+import { getAuthorById } from "@/lib/authors";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
 import IngredientImageCarousel from "@/components/IngredientImageCarousel";
@@ -30,8 +31,12 @@ export default function RecipePage({ params }: RecipePageProps) {
     notFound();
   }
 
+  const author = recipe.frontmatter.author
+    ? getAuthorById(recipe.frontmatter.author)
+    : undefined;
+
   return (
-    <PageLayout>
+    <PageLayout author={author}>
       <div className="max-w-[720px] mx-auto">
         <h1 className={`${typography.h1} mb-5`}>
           {recipe.frontmatter.title}
