@@ -7,6 +7,7 @@ servings: 0
 prepTime: ""
 cookTime: ""
 author: "maria-perez"
+originalLanguage: "es"
 ingredientImages:
   - /ingredients/garlic.webp
   - /ingredients/aji-amarillo.webp
@@ -16,7 +17,7 @@ ingredientImages:
   - /ingredients/whole-milk.webp
 ---
 
-## Ingredients
+## Ingredients (es)
 
 - 1 taza de trigo
 - Aceite
@@ -31,7 +32,22 @@ ingredientImages:
 - Queso fresco
 - Leche de vaca
 
-## Steps
+## Ingredients (en)
+
+- 1 cup peeled wheat
+- Oil
+- 2 tablespoons ají amarillo paste
+- 1 tablespoon minced garlic
+- Cumin
+- Oregano
+- Turmeric
+- Ground ginger
+- Salt
+- Pepper
+- Queso fresco
+- Whole milk
+
+## Steps (es)
 
 Remojar el trigo toda la noche. Escurrir el agua y enjuagar un par de veces.
 
@@ -40,3 +56,13 @@ Colocar unas tres cucharadas de aceite en la olla y agregar el ajo molido, orég
 Verter el trigo y mezclarlo con el aderezo. Agregar agua hasta cubrir completamente el trigo y dejar que se cocine. Ir revisando la cocción y, si es necesario aumentar agua, es importante que sea agua caliente.
 
 Cuando el trigo esté suave, agregar unos trozos de queso fresco y un poco de leche fresca de vaca.
+
+## Steps (en)
+
+Soak the wheat overnight. Drain the water and rinse a couple of times.
+
+Add about three tablespoons of oil to a pot, then stir in the minced garlic, oregano, pepper, cumin, turmeric to taste, ground ginger, salt, and two tablespoons of ají amarillo paste (Amarillin). Stir all the ingredients for a few minutes.
+
+Pour in the wheat and mix it with the base. Add water until the wheat is fully covered and let it cook. Check the cooking from time to time, and if you need to add more water, make sure it's hot water.
+
+When the wheat is tender, add a few pieces of queso fresco and a splash of fresh whole milk.

@@ -1,15 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { typography, colors, spacing } from "@/lib/tokens";
+import { getLanguage } from "@/lib/language";
+import { t } from "@/lib/strings";
 
 interface NavigationProps {
   activePage?: "index" | "ingredients";
 }
 
 export default function Navigation({ activePage }: NavigationProps) {
+  const language = getLanguage();
   const navItems = [
     { label: "Index", href: "/", key: "index" as const },
-    { label: "Ingredients", href: "/ingredients", key: "ingredients" as const },
+    { label: t("navIngredients", language), href: "/ingredients", key: "ingredients" as const },
   ];
 
   return (

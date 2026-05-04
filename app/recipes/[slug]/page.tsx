@@ -6,6 +6,8 @@ import PageLayout from "@/components/PageLayout";
 import IngredientImageCarousel from "@/components/IngredientImageCarousel";
 import StepList from "@/components/StepList";
 import { typography, spacing } from "@/lib/tokens";
+import { getLanguage } from "@/lib/language";
+import { t } from "@/lib/strings";
 
 interface RecipePageProps {
   params: {
@@ -25,7 +27,8 @@ export function generateMetadata({ params }: RecipePageProps): Metadata {
 }
 
 export default function RecipePage({ params }: RecipePageProps) {
-  const recipe = getRecipeBySlug(params.slug);
+  const language = getLanguage();
+  const recipe = getRecipeBySlug(params.slug, language);
 
   if (!recipe) {
     notFound();
@@ -49,7 +52,7 @@ export default function RecipePage({ params }: RecipePageProps) {
         <div className={`grid grid-cols-1 md:grid-cols-[2fr_3fr] ${spacing.twoColumnGap}`}>
           <section>
             <h2 className={`${typography.h2} mb-5`}>
-              Ingredients
+              {t("ingredients", language)}
             </h2>
             <ul className={`space-y-1 ${typography.body}`}>
               {recipe.ingredients.map((ingredient, index) => (
@@ -62,7 +65,7 @@ export default function RecipePage({ params }: RecipePageProps) {
 
           <section>
             <h2 className={`${typography.h2} mb-5`}>
-              Preparation
+              {t("preparation", language)}
             </h2>
             <StepList steps={recipe.instructions} />
           </section>

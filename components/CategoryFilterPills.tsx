@@ -2,8 +2,13 @@
 
 import { typography, colors } from "@/lib/tokens";
 
+interface CategoryOption {
+  value: string;
+  label: string;
+}
+
 interface CategoryFilterPillsProps {
-  categories: string[];
+  categories: CategoryOption[];
   selected: string;
   onSelect: (category: string) => void;
 }
@@ -17,15 +22,15 @@ export default function CategoryFilterPills({
     <div className="flex items-start gap-7 overflow-x-auto whitespace-nowrap no-scrollbar">
       {categories.map((category) => (
         <button
-          key={category}
-          onClick={() => onSelect(category)}
+          key={category.value}
+          onClick={() => onSelect(category.value)}
           className={`${typography.h3} ${
-            selected === category
+            selected === category.value
               ? `${colors.text.active} border-b-2 border-neutral-800 pb-1`
               : `${colors.text.muted} hover:text-neutral-800 transition-colors pb-1 border-b-2 border-transparent`
           }`}
         >
-          {category}
+          {category.label}
         </button>
       ))}
     </div>

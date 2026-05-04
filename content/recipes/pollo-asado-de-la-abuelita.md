@@ -7,6 +7,7 @@ servings: 0
 prepTime: ""
 cookTime: ""
 author: "juan-andres-chung"
+originalLanguage: "es"
 ingredientImages:
   - /ingredients/soy-sauce.webp
   - /ingredients/whole-chicken.webp
@@ -18,7 +19,7 @@ ingredientImages:
   - /ingredients/red-wine-vinegar.webp
 ---
 
-## Ingredients
+## Ingredients (es)
 
 - 1 pollo entero con piel
 - 4 cucharadas de ají panca
@@ -34,7 +35,23 @@ ingredientImages:
 - Pimienta
 - 1 cucharada de chuño
 
-## Steps
+## Ingredients (en)
+
+- 1 whole chicken with skin
+- 4 tablespoons ají panca paste
+- 2 tablespoons minced garlic
+- 2 tablespoons red wine vinegar
+- 1 teaspoon mustard
+- 1 tablespoon soy sauce
+- 1 onion
+- 3 garlic cloves
+- 1 cup water
+- Cumin
+- Salt
+- Pepper
+- 1 tablespoon potato starch (chuño)
+
+## Steps (es)
 
 En un bowl, mezclar el ají panca, ajo molido, vinagre, mostaza, sillao, sal, pimienta y comino.
 
@@ -53,3 +70,23 @@ Trozar el pollo previamente dorado e incorporar a la olla, agregar el agua y dej
 Espesar con chuño diluido (opcional).
 
 Acompañar con arroz, ensalada rusa y/o puré.
+
+## Steps (en)
+
+In a bowl, mix the ají panca paste, minced garlic, red wine vinegar, mustard, soy sauce, salt, pepper, and cumin.
+
+Marinate the whole chicken in this mixture for 2 hours (refrigerated).
+
+In a large pot, heat some oil and brown the whole chicken on all four sides.
+
+Once browned, remove the chicken and set aside.
+
+In the same pot, brown the onion (cut into brunoise) for 10 minutes with a pinch of salt, then add the chopped garlic and cook for 5 minutes.
+
+Add the leftover marinade to the base and cook over low heat for 15 to 20 minutes.
+
+Cut the seared chicken into pieces and return it to the pot, add the water, and let it cook for 30 to 35 minutes over medium heat.
+
+Thicken with diluted potato starch (optional).
+
+Serve with rice, Russian salad, and/or mashed potatoes.
