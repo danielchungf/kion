@@ -1,40 +1,59 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { Recipe, RecipeFrontmatter } from "./types";
+import { Language, Recipe, RecipeContent, RecipeFrontmatter } from "./types";
 
 const recipesDirectory = path.join(process.cwd(), "content/recipes");
 
+function parseIngredients(body: string): string[] {
+  return body
+    .split("\n")
+    .map((line) => line.replace(/^-\s*/, "").trim())
+    .filter(Boolean);
+}
+
+function parseSteps(body: string): string[] {
+  return body
+    .split(/\n\n+/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+}
+
 function parseRecipeBody(content: string): {
-  ingredients: string[];
-  instructions: string[];
+  en: RecipeContent;
+  es: RecipeContent;
 } {
   const sections = content.split(/^## /m).filter(Boolean);
-  let ingredients: string[] = [];
-  let instructions: string[] = [];
+  const buckets: Record<string, string> = {};
 
   for (const section of sections) {
     const lines = section.trim().split("\n");
     const heading = lines[0].trim().toLowerCase();
     const body = lines.slice(1).join("\n").trim();
-
-    if (heading === "ingredients") {
-      ingredients = body
-        .split("\n")
-        .map((line) => line.replace(/^-\s*/, "").trim())
-        .filter(Boolean);
-    } else if (heading === "steps") {
-      instructions = body
-        .split(/\n\n+/)
-        .map((p) => p.trim())
-        .filter(Boolean);
-    }
+    buckets[heading] = body;
   }
 
-  return { ingredients, instructions };
+  function pickIngredients(lang: Language): string[] {
+    const langKey = `ingredients (${lang})`;
+    const fallback = "ingredients";
+    const raw = buckets[langKey] ?? buckets[fallback] ?? "";
+    return parseIngredients(raw);
+  }
+
+  function pickSteps(lang: Language): string[] {
+    const langKey = `steps (${lang})`;
+    const fallback = "steps";
+    const raw = buckets[langKey] ?? buckets[fallback] ?? "";
+    return parseSteps(raw);
+  }
+
+  return {
+    en: { ingredients: pickIngredients("en"), instructions: pickSteps("en") },
+    es: { ingredients: pickIngredients("es"), instructions: pickSteps("es") },
+  };
 }
 
-export function getAllRecipes(): Recipe[] {
+export function getAllRecipes(language: Language = "en"): Recipe[] {
   if (!fs.existsSync(recipesDirectory)) return [];
 
   const fileNames = fs
@@ -46,13 +65,22 @@ export function getAllRecipes(): Recipe[] {
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContents);
     const frontmatter = data as RecipeFrontmatter;
-    const { ingredients, instructions } = parseRecipeBody(content);
+    const parsed = parseRecipeBody(content);
+    const active = parsed[language];
 
-    return { frontmatter, ingredients, instructions };
+    return {
+      frontmatter,
+      ingredients: active.ingredients,
+      instructions: active.instructions,
+      content: parsed,
+    };
   });
 }
 
-export function getRecipeBySlug(slug: string): Recipe | undefined {
-  const all = getAllRecipes();
+export function getRecipeBySlug(
+  slug: string,
+  language: Language = "en"
+): Recipe | undefined {
+  const all = getAllRecipes(language);
   return all.find((r) => r.frontmatter.slug === slug);
 }

@@ -7,6 +7,7 @@ servings: 0
 prepTime: ""
 cookTime: ""
 author: "daniel-chung"
+originalLanguage: "es"
 ingredientImages:
   - /ingredients/jalapeno.webp
   - /ingredients/bell-pepper-red.webp
@@ -18,7 +19,7 @@ ingredientImages:
   - /ingredients/veggie-stock.webp
 ---
 
-## Ingredients
+## Ingredients (es)
 
 - Aceite de oliva
 - 1 cebolla grande
@@ -34,7 +35,23 @@ ingredientImages:
 - 6 huevos grandes (o los que entren en la sartén)
 - Queso feta desmenuzado y perejil fresco para terminar
 
-## Steps
+## Ingredients (en)
+
+- Olive oil
+- 1 large onion
+- 1 cup red bell pepper
+- 1 jalapeño, seeded and sliced
+- 1 teaspoon cumin
+- ½ teaspoon paprika
+- ½ teaspoon turmeric
+- ½ teaspoon black pepper
+- ¼ teaspoon cayenne
+- 1 (800g) can of crushed San Marzano tomatoes (or fresh tomatoes in season)
+- ½ cup water or stock, as needed
+- 6 large eggs (or as many as fit in the pan)
+- Crumbled feta cheese and fresh parsley to finish
+
+## Steps (es)
 
 Calentar el aceite de oliva en una sartén grande y sofreír la cebolla en cubos o tiras hasta que esté suave y translúcida. Agregar sal al gusto y seguir cocinando hasta que las cebollas suelten su agua y se doren ligeramente.
 
@@ -45,3 +62,15 @@ Verter los tomates triturados junto con el agua o caldo, dependiendo de la consi
 Hacer pequeños huecos en la salsa con una cuchara y romper los huevos directamente en la sartén, distribuyéndolos de manera pareja. Tapar la sartén y cocinar a fuego bajo, o llevar al horno precalentado a 400 °F (200 °C), hasta que las claras estén apenas cuajadas y las yemas sigan líquidas.
 
 Terminar con queso feta desmenuzado y perejil fresco picado por encima. Servir con pan crocante.
+
+## Steps (en)
+
+Heat olive oil in a large skillet and sauté the onion, diced or sliced, until soft and translucent. Season with salt to taste and keep cooking until the onions release their water and lightly brown.
+
+Stir in the red bell pepper and jalapeño and cook a few minutes more until they soften. Add the cumin, paprika, turmeric, black pepper, and cayenne, stirring so the spices bloom and release their aroma.
+
+Pour in the crushed tomatoes along with the water or stock, depending on the consistency you want. Let the sauce simmer until the vegetables are very soft and sweet, adjusting the liquid with more water or stock as needed. The sauce should be thick but not dry.
+
+Make small wells in the sauce with a spoon and crack the eggs directly into the pan, spacing them evenly. Cover the skillet and cook over low heat, or transfer to an oven preheated to 400 °F (200 °C), until the whites are just set and the yolks are still runny.
+
+Finish with crumbled feta and fresh chopped parsley on top. Serve with crusty bread.
