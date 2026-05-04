@@ -6,6 +6,7 @@ category: "Soups"
 servings: 4
 prepTime: "10 min"
 cookTime: "25 min"
+author: "daniel-chung"
 ingredientImages:
   - /ingredients/carrot.webp
   - /ingredients/potato.webp
