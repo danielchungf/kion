@@ -57,20 +57,16 @@ ingredientImages:
 
 ## Steps (es)
 
-Poner aceite en una olla y dejar que caliente. Añadir el ajo molido y la cebolla morada en cubitos pequeños. Cocinar hasta que la cebolla esté transparente.
+Poner aceite en una olla y dejar que caliente. Sofríe la carne y hasta que esté cocida a tu gusto, y resérvala. Añadir el ajo molido y la cebolla morada en cubitos pequeños. Cocinar hasta que la cebolla esté transparente.
 
-Añadir el tomate en cubos pequeños. Cocinar hasta que el tomate esté naranja.
-
-Añadir la carne. Sazonar con la sal, ajinomoto, pimienta y orégano. Agregar el agua y esperar 15 minutos. Añadir el cabello de ángel y esperar a que hierva la pasta.
+Añadir el tomate en cubos pequeños. Cocinar hasta que el tomate esté naranja. Añadir la carne. Sazonar con la sal, ajinomoto, pimienta y orégano. Agregar el agua y esperar 15 minutos. Añadir el cabello de ángel y esperar a que hierva la pasta.
 
 Apagar el fuego y agregar la leche.
 
 ## Steps (en)
 
-Heat oil in a pot. Add the minced garlic and the red onion cut into small dice. Cook until the onion is translucent.
+Heat oil in a pot. Sear the beef until cooked to your liking, then set it aside. Add the minced garlic and the red onion cut into small dice. Cook until the onion is translucent.
 
-Add the tomato cut into small dice. Cook until the tomato turns orange.
-
-Add the beef. Season with salt, ajinomoto, pepper, and oregano. Add the water and let it cook for 15 minutes. Add the angel hair pasta and wait for it to come back to a boil.
+Add the tomato cut into small dice. Cook until the tomato turns orange. Add the beef back in. Season with salt, ajinomoto, pepper, and oregano. Add the water and let it cook for 15 minutes. Add the angel hair pasta and wait for it to come back to a boil.
 
 Turn off the heat and stir in the milk.
