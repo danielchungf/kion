@@ -7,6 +7,7 @@ export const authors: Author[] = [
   { id: "juan-andres-chung", name: "Juan Andres Chung", avatar: "/authors/juan-andres-chung.webp" },
   { id: "maria-perez", name: "Maria Perez", avatar: "/authors/maria-perez.webp" },
   { id: "paulina-cocina", name: "Paulina Cocina", avatar: "/authors/paulina-cocina.webp" },
+  { id: "sandra-plevisani", name: "Sandra Plevisani", avatar: "/authors/sandra-plevisani.avif" },
 ];
 
 export function getAuthorById(id: string): Author | undefined {
