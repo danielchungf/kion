@@ -17,6 +17,7 @@ export const ingredients: Ingredient[] = [
   { id: "60", name: "Brown Rice", nameEs: "Arroz Integral", category: "Grains", image: "/ingredients/brown-rice.webp" },
   { id: "105", name: "Brown Sugar", nameEs: "Azúcar Rubia", category: "Pantry", image: "/ingredients/brown-sugar.webp" },
   { id: "49", name: "Butter", nameEs: "Mantequilla", category: "Dairy", image: "/ingredients/butter.webp" },
+  { id: "110", name: "Canned Tuna", nameEs: "Atún en Lata", category: "Pantry", image: "/ingredients/canned-tuna.webp" },
   { id: "2", name: "Carrot", nameEs: "Zanahoria", category: "Vegetables", image: "/ingredients/carrot.webp" },
   { id: "66", name: "Cassava", nameEs: "Yuca", category: "Vegetables", image: "/ingredients/cassava.webp" },
   { id: "73", name: "Cecina", nameEs: "Cecina", category: "Proteins", image: "/ingredients/cecina.webp" },
