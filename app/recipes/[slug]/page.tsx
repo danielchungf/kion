@@ -36,13 +36,18 @@ export default function RecipePage({ params }: RecipePageProps) {
     notFound();
   }
 
-  const author = recipe.frontmatter.author
-    ? getAuthorById(recipe.frontmatter.author)
-    : undefined;
+  const authorIds = recipe.frontmatter.author
+    ? Array.isArray(recipe.frontmatter.author)
+      ? recipe.frontmatter.author
+      : [recipe.frontmatter.author]
+    : [];
+  const authors = authorIds
+    .map((id) => getAuthorById(id))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
   const title = getRecipeTitle(recipe.frontmatter, language);
 
   return (
-    <PageLayout author={author}>
+    <PageLayout authors={authors}>
       <div className="max-w-[720px] mx-auto">
         <h1 className={`${typography.h1} mb-5`}>
           {title}

@@ -11,7 +11,7 @@ export interface RecipeFrontmatter {
   prepTime: string;
   cookTime: string;
   ingredientImages: string[];
-  author?: string;
+  author?: string | string[];
   originalLanguage?: Language;
 }
 

@@ -7,17 +7,17 @@ import { colors, spacing } from "@/lib/tokens";
 interface PageLayoutProps {
   children: ReactNode;
   activePage?: "index" | "ingredients";
-  author?: Author;
+  authors?: Author[];
 }
 
-export default function PageLayout({ children, activePage, author }: PageLayoutProps) {
+export default function PageLayout({ children, activePage, authors }: PageLayoutProps) {
   return (
     <div className={`min-h-screen ${colors.bg.page} overflow-x-hidden`}>
       <div className={spacing.page}>
         <Navigation activePage={activePage} />
         {children}
       </div>
-      <Footer author={author} />
+      <Footer authors={authors} />
     </div>
   );
 }
