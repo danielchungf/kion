@@ -1,5 +1,6 @@
 ---
 title: "Big Steak Pepper Rice"
+titleEs: "Arroz a la Pimienta con Carne"
 slug: "big-steak-pepper-rice"
 id: "31"
 category: ""

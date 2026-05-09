@@ -1,5 +1,6 @@
 ---
 title: "Apple Crisp"
+titleEs: "Crumble de Manzana"
 slug: "apple-crisp"
 id: "3"
 category: ""

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getRecipeBySlug } from "@/lib/recipes";
+import { getRecipeBySlug, getRecipeTitle } from "@/lib/recipes";
 import { getAuthorById } from "@/lib/authors";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
@@ -16,12 +16,14 @@ interface RecipePageProps {
 }
 
 export function generateMetadata({ params }: RecipePageProps): Metadata {
-  const recipe = getRecipeBySlug(params.slug);
+  const language = getLanguage();
+  const recipe = getRecipeBySlug(params.slug, language);
   if (!recipe) return {};
+  const title = getRecipeTitle(recipe.frontmatter, language);
   return {
-    title: `${recipe.frontmatter.title} — Kion`,
+    title: `${title} — Kion`,
     openGraph: {
-      title: recipe.frontmatter.title,
+      title,
     },
   };
 }
@@ -37,12 +39,13 @@ export default function RecipePage({ params }: RecipePageProps) {
   const author = recipe.frontmatter.author
     ? getAuthorById(recipe.frontmatter.author)
     : undefined;
+  const title = getRecipeTitle(recipe.frontmatter, language);
 
   return (
     <PageLayout author={author}>
       <div className="max-w-[720px] mx-auto">
         <h1 className={`${typography.h1} mb-5`}>
-          {recipe.frontmatter.title}
+          {title}
         </h1>
 
         <IngredientImageCarousel
@@ -55,11 +58,20 @@ export default function RecipePage({ params }: RecipePageProps) {
               {t("ingredients", language)}
             </h2>
             <ul className={`space-y-1 ${typography.body}`}>
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index} className="flex items-start">
-                  <span>{ingredient}</span>
-                </li>
-              ))}
+              {recipe.ingredients.map((ingredient, index) =>
+                ingredient.kind === "subheading" ? (
+                  <li
+                    key={index}
+                    className={`${typography.h3} list-none pt-3 first:pt-0`}
+                  >
+                    {ingredient.text}
+                  </li>
+                ) : (
+                  <li key={index} className="flex items-start">
+                    <span>{ingredient.text}</span>
+                  </li>
+                )
+              )}
             </ul>
           </section>
 
