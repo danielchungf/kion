@@ -6,7 +6,9 @@ category: ""
 servings: 0
 prepTime: ""
 cookTime: ""
-author: "juan-chung"
+author:
+  - juan-andres-chung
+  - juan-chung
 originalLanguage: "es"
 ingredientImages:
   - /ingredients/eggs.webp

@@ -5,24 +5,45 @@ import { t } from "@/lib/strings";
 import LanguageToggle from "./LanguageToggle";
 
 interface FooterProps {
-  author?: Author;
+  authors?: Author[];
 }
 
-export default function Footer({ author }: FooterProps) {
+function joinNames(names: string[], language: "en" | "es"): string {
+  if (names.length <= 1) return names[0] ?? "";
+  const conj = language === "es" ? "y" : "&";
+  return `${names.slice(0, -1).join(", ")} ${conj} ${names[names.length - 1]}`;
+}
+
+export default function Footer({ authors }: FooterProps) {
   const language = getLanguage();
+  const hasAuthors = authors && authors.length > 0;
   return (
     <footer className="py-7 px-5 md:max-w-[720px] md:mx-auto md:px-0 md:text-left text-center">
       <div className="flex items-center gap-2 font-young-serif font-medium text-sm tracking-tight text-neutral-400 md:justify-start justify-center">
-        {author && (
+        {hasAuthors && (
           <>
-            <Image
-              src={author.avatar}
-              alt={author.name}
-              width={28}
-              height={28}
-              className="rounded-full object-cover"
-            />
-            <span>{t("recipeBy", language)} {author.name}</span>
+            <div className="flex">
+              {authors.map((author, i) => (
+                <div
+                  key={author.id}
+                  style={{ zIndex: i + 1 }}
+                  className={`relative w-7 h-7 rounded-full ring-2 ring-[#FBFAF5] overflow-hidden hover:!z-30 ${
+                    i === 0 ? "" : "-ml-2"
+                  }`}
+                >
+                  <Image
+                    src={author.avatar}
+                    alt={author.name}
+                    width={28}
+                    height={28}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <span>
+              {t("recipeBy", language)} {joinNames(authors.map((a) => a.name), language)}
+            </span>
             <span aria-hidden="true">·</span>
           </>
         )}
