@@ -1,5 +1,6 @@
 ---
 title: "Cold Somen Noodles"
+titleEs: "Sōmen Frío"
 slug: "cold-somen-noodles"
 id: "9"
 category: ""

@@ -19,9 +19,17 @@ export default function RecipeListItem({ slug, title, hasContent = true }: Recip
   return (
     <Link
       href={`/recipes/${slug}`}
-      className={`${typography.h2} hover:${colors.text.active} transition-colors`}
+      className={`${typography.h2} hover:${colors.text.active} transition-colors group`}
     >
-      {title}
+      <span className="relative inline-block">
+        <img
+          src="/chef-hat.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute right-full top-1/2 -translate-y-1/2 mr-3 w-10 h-10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block"
+        />
+        {title}
+      </span>
     </Link>
   );
 }

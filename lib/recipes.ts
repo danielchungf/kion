@@ -1,22 +1,32 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { Language, Recipe, RecipeContent, RecipeFrontmatter } from "./types";
+import { Language, Recipe, RecipeBlock, RecipeContent, RecipeFrontmatter } from "./types";
 
 const recipesDirectory = path.join(process.cwd(), "content/recipes");
 
-function parseIngredients(body: string): string[] {
+const SUBHEADING_RE = /^\*\*(.+?):?\*\*:?$/;
+
+function toBlock(text: string): RecipeBlock {
+  const match = text.match(SUBHEADING_RE);
+  if (match) return { kind: "subheading", text: match[1].trim() };
+  return { kind: "item", text };
+}
+
+function parseIngredients(body: string): RecipeBlock[] {
   return body
     .split("\n")
     .map((line) => line.replace(/^-\s*/, "").trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(toBlock);
 }
 
-function parseSteps(body: string): string[] {
+function parseSteps(body: string): RecipeBlock[] {
   return body
     .split(/\n\n+/)
     .map((p) => p.trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(toBlock);
 }
 
 function parseRecipeBody(content: string): {
@@ -33,14 +43,14 @@ function parseRecipeBody(content: string): {
     buckets[heading] = body;
   }
 
-  function pickIngredients(lang: Language): string[] {
+  function pickIngredients(lang: Language): RecipeBlock[] {
     const langKey = `ingredients (${lang})`;
     const fallback = "ingredients";
     const raw = buckets[langKey] ?? buckets[fallback] ?? "";
     return parseIngredients(raw);
   }
 
-  function pickSteps(lang: Language): string[] {
+  function pickSteps(lang: Language): RecipeBlock[] {
     const langKey = `steps (${lang})`;
     const fallback = "steps";
     const raw = buckets[langKey] ?? buckets[fallback] ?? "";
@@ -83,4 +93,12 @@ export function getRecipeBySlug(
 ): Recipe | undefined {
   const all = getAllRecipes(language);
   return all.find((r) => r.frontmatter.slug === slug);
+}
+
+export function getRecipeTitle(
+  frontmatter: RecipeFrontmatter,
+  language: Language
+): string {
+  if (language === "es") return frontmatter.titleEs ?? frontmatter.title;
+  return frontmatter.titleEn ?? frontmatter.title;
 }

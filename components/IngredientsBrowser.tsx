@@ -19,7 +19,9 @@ export default function IngredientsBrowser({ language }: IngredientsBrowserProps
     selectedCategory === "All"
       ? ingredients
       : ingredients.filter((ing) => ing.category === selectedCategory)
-  ).toSorted((a, b) => a.name.localeCompare(b.name));
+  )
+    .map((ing) => ({ ...ing, displayName: language === "es" ? ing.nameEs : ing.name }))
+    .toSorted((a, b) => a.displayName.localeCompare(b.displayName));
 
   const localizedCategories = categories.map((c) => ({
     value: c,
@@ -42,7 +44,7 @@ export default function IngredientsBrowser({ language }: IngredientsBrowserProps
         {filteredIngredients.map((ingredient) => (
           <IngredientCard
             key={ingredient.id}
-            name={ingredient.name}
+            name={ingredient.displayName}
             image={ingredient.image}
           />
         ))}

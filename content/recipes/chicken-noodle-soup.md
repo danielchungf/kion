@@ -1,5 +1,6 @@
 ---
 title: "Chicken Noodle Soup"
+titleEs: "Sopa de Pollo con Fideos"
 slug: "chicken-noodle-soup"
 id: "7"
 category: "Soups"

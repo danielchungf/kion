@@ -1,12 +1,18 @@
-import { getAllRecipes } from "@/lib/recipes";
+import { getAllRecipes, getRecipeTitle } from "@/lib/recipes";
+import { getLanguage } from "@/lib/language";
 import PageLayout from "@/components/PageLayout";
 import RecipeListItem from "@/components/RecipeListItem";
 import { typography, spacing } from "@/lib/tokens";
 
 export default function Home() {
-  const recipes = getAllRecipes();
-  const sortedRecipes = [...recipes].sort((a, b) =>
-    a.frontmatter.title.localeCompare(b.frontmatter.title, undefined, {
+  const language = getLanguage();
+  const recipes = getAllRecipes(language);
+  const withTitles = recipes.map((r) => ({
+    ...r,
+    displayTitle: getRecipeTitle(r.frontmatter, language),
+  }));
+  const sortedRecipes = withTitles.sort((a, b) =>
+    a.displayTitle.localeCompare(b.displayTitle, undefined, {
       sensitivity: "base",
     })
   );
@@ -27,7 +33,7 @@ export default function Home() {
             <RecipeListItem
               key={recipe.frontmatter.id}
               slug={recipe.frontmatter.slug}
-              title={recipe.frontmatter.title}
+              title={recipe.displayTitle}
               hasContent={recipe.ingredients.length > 0}
             />
           ))}
@@ -37,7 +43,7 @@ export default function Home() {
             <RecipeListItem
               key={recipe.frontmatter.id}
               slug={recipe.frontmatter.slug}
-              title={recipe.frontmatter.title}
+              title={recipe.displayTitle}
               hasContent={recipe.ingredients.length > 0}
             />
           ))}

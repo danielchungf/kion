@@ -1,5 +1,6 @@
 ---
 title: "Milanesas Argentinas"
+titleEn: "Argentinian Milanesas"
 slug: "milanesas-argentinas"
 id: "29"
 category: ""

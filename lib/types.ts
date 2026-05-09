@@ -2,6 +2,8 @@ export type Language = "en" | "es";
 
 export interface RecipeFrontmatter {
   title: string;
+  titleEn?: string;
+  titleEs?: string;
   slug: string;
   id: string;
   category: string;
@@ -13,21 +15,26 @@ export interface RecipeFrontmatter {
   originalLanguage?: Language;
 }
 
+export type RecipeBlock =
+  | { kind: "subheading"; text: string }
+  | { kind: "item"; text: string };
+
 export interface RecipeContent {
-  ingredients: string[];
-  instructions: string[];
+  ingredients: RecipeBlock[];
+  instructions: RecipeBlock[];
 }
 
 export interface Recipe {
   frontmatter: RecipeFrontmatter;
-  ingredients: string[];
-  instructions: string[];
+  ingredients: RecipeBlock[];
+  instructions: RecipeBlock[];
   content: { en: RecipeContent; es: RecipeContent };
 }
 
 export interface Ingredient {
   id: string;
   name: string;
+  nameEs: string;
   category: string;
   image?: string;
 }

@@ -1,5 +1,6 @@
 ---
 title: "Garlic Soy Sauce Noodles"
+titleEs: "Fideos con Sillao y Ajo"
 slug: "garlic-soy-sauce-noodles"
 id: "13"
 category: ""
