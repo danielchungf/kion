@@ -18,7 +18,7 @@ type StringKey =
 const strings: Record<StringKey, Record<Language, string>> = {
   navIngredients: { en: "Ingredients", es: "Ingredientes" },
   recipeBy: { en: "Recipe by", es: "Receta de" },
-  madeBy: { en: "Made by", es: "Hecho por" },
+  madeBy: { en: "Site made by", es: "Sitio web hecho por" },
   ingredients: { en: "Ingredients", es: "Ingredientes" },
   preparation: { en: "Preparation", es: "Preparación" },
   categoryAll: { en: "All", es: "Todos" },
