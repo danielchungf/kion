@@ -58,7 +58,7 @@ Una vez que la albahaca y la espinaca estén frías, escurrirla.
 
 Cocinar los tallarines con sal.
 
-Al sofrito reposado agregar una pizca de comino y sal. En una licuadora, colocar el sofrito junto con queso fresco, parmesano, y pecanas (opcional). Añadir pimienta al gusto, un chorro de leche y un golpe de agua de pasta.
+Al sofrito reposado agregar una pizca de comino y sal. En una licuadora, colocar el sofrito junto con la espinaca, la albahaca, queso fresco, parmesano, y pecanas (opcional). Añadir pimienta al gusto, un chorro de leche y un golpe de agua de pasta.
 
 En una sartén, agregar un poco de agua de pasta y colocar la salsa que se va a comer. Solo una calentada, no dejar hervir. Incorporar el tallarín y juntar todo. Añadir más salsa al gusto y lo demás congelar para después.
 
@@ -74,7 +74,7 @@ Once the basil and spinach are cold, drain them.
 
 Cook the pasta with salt.
 
-To the rested sofrito, add a pinch of cumin and salt. In a blender, combine the sofrito with queso fresco, parmesan, and pecans (optional). Add pepper to taste, a splash of milk, and a hit of pasta water.
+To the rested sofrito, add a pinch of cumin and salt. In a blender, combine the sofrito with the spinach, basil, queso fresco, parmesan, and pecans (optional). Add pepper to taste, a splash of milk, and a hit of pasta water.
 
 In a pan, add a little pasta water and the amount of sauce you plan to eat. Just heat it through — do not let it boil. Add the pasta and toss everything together. Add more sauce to taste and freeze the rest for later.
 
