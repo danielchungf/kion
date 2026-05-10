@@ -13,6 +13,7 @@ export interface RecipeFrontmatter {
   ingredientImages: string[];
   author?: string | string[];
   originalLanguage?: Language;
+  sourceUrl?: string;
 }
 
 export type RecipeBlock =

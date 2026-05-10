@@ -8,6 +8,7 @@ prepTime: ""
 cookTime: ""
 author: "daniel-chung"
 originalLanguage: "en"
+sourceUrl: "https://www.youtube.com/watch?v=O9kFFtURmSo"
 ingredientImages:
   - /ingredients/golden-curry.webp
   - /ingredients/honey.webp

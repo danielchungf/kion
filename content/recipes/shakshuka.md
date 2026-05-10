@@ -8,6 +8,7 @@ prepTime: ""
 cookTime: ""
 author: "daniel-chung"
 originalLanguage: "es"
+sourceUrl: "https://www.youtube.com/watch?v=ifWWRZSWS18"
 ingredientImages:
   - /ingredients/jalapeno.webp
   - /ingredients/bell-pepper-red.webp
