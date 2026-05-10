@@ -92,6 +92,8 @@ export const ingredients: Ingredient[] = [
   { id: "97", name: "Shrimp", nameEs: "Langostinos", category: "Proteins", image: "/ingredients/shrimp.webp" },
   { id: "100", name: "Sirloin Steak", nameEs: "Lomo Fino", category: "Proteins", image: "/ingredients/sirloin-steak.webp" },
   { id: "3", name: "Soy Sauce", nameEs: "Sillao", category: "Pantry", image: "/ingredients/soy-sauce.webp" },
+  { id: "111", name: "Spaghetti", nameEs: "Tallarines", category: "Grains", image: "/ingredients/spaghetti.webp" },
+  { id: "112", name: "Spinach", nameEs: "Espinaca", category: "Vegetables", image: "/ingredients/spinach.webp" },
   { id: "21", name: "Squash", nameEs: "Zapallo", category: "Vegetables", image: "/ingredients/squash.webp" },
   { id: "38", name: "Sriracha Sauce", nameEs: "Salsa Sriracha", category: "Pantry", image: "/ingredients/sriracha-sauce.webp" },
   { id: "12", name: "Strawberries", nameEs: "Fresas", category: "Fruits", image: "/ingredients/strawberries.webp" },

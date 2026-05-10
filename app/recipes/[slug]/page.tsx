@@ -47,7 +47,7 @@ export default function RecipePage({ params }: RecipePageProps) {
   const title = getRecipeTitle(recipe.frontmatter, language);
 
   return (
-    <PageLayout authors={authors}>
+    <PageLayout authors={authors} sourceUrl={recipe.frontmatter.sourceUrl}>
       <div className="max-w-[720px] mx-auto">
         <h1 className={`${typography.h1} mb-5`}>
           {title}

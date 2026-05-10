@@ -8,16 +8,17 @@ interface PageLayoutProps {
   children: ReactNode;
   activePage?: "index" | "ingredients";
   authors?: Author[];
+  sourceUrl?: string;
 }
 
-export default function PageLayout({ children, activePage, authors }: PageLayoutProps) {
+export default function PageLayout({ children, activePage, authors, sourceUrl }: PageLayoutProps) {
   return (
     <div className={`min-h-screen ${colors.bg.page} overflow-x-hidden`}>
       <div className={spacing.page}>
         <Navigation activePage={activePage} />
         {children}
       </div>
-      <Footer authors={authors} />
+      <Footer authors={authors} sourceUrl={sourceUrl} />
     </div>
   );
 }

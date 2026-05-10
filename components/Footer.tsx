@@ -6,6 +6,7 @@ import LanguageToggle from "./LanguageToggle";
 
 interface FooterProps {
   authors?: Author[];
+  sourceUrl?: string;
 }
 
 function joinNames(names: string[], language: "en" | "es"): string {
@@ -14,9 +15,12 @@ function joinNames(names: string[], language: "en" | "es"): string {
   return `${names.slice(0, -1).join(", ")} ${conj} ${names[names.length - 1]}`;
 }
 
-export default function Footer({ authors }: FooterProps) {
+export default function Footer({ authors, sourceUrl }: FooterProps) {
   const language = getLanguage();
   const hasAuthors = authors && authors.length > 0;
+  const recipeByPhrase = t("recipeBy", language);
+  const [recipeWord, ...recipeByRest] = recipeByPhrase.split(" ");
+  const recipeBySuffix = recipeByRest.join(" ");
   return (
     <footer className="py-7 px-5 md:max-w-[720px] md:mx-auto md:px-0 md:text-left text-center">
       <div className="flex items-center gap-2 font-young-serif font-medium text-sm tracking-tight text-neutral-400 md:justify-start justify-center">
@@ -42,7 +46,19 @@ export default function Footer({ authors }: FooterProps) {
               ))}
             </div>
             <span>
-              {t("recipeBy", language)} {joinNames(authors.map((a) => a.name), language)}
+              {sourceUrl ? (
+                <a
+                  href={sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-neutral-800 transition-colors"
+                >
+                  {recipeWord}
+                </a>
+              ) : (
+                recipeWord
+              )}
+              {recipeBySuffix && ` ${recipeBySuffix}`} {joinNames(authors.map((a) => a.name), language)}
             </span>
             <span aria-hidden="true">·</span>
           </>
