@@ -91,10 +91,10 @@ const youngSerif = localFont({
 
 export const metadata: Metadata = {
   title: "Kion — Family Cookbook",
-  description: "A family's culinary legacy, preserved and shared.",
+  description: "Las recetas de nuestra familia en un solo lugar.",
   openGraph: {
     title: "Kion — Family Cookbook",
-    description: "A family's culinary legacy, preserved and shared.",
+    description: "Las recetas de nuestra familia en un solo lugar.",
   },
   icons: {
     icon: [
