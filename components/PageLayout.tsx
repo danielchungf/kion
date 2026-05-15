@@ -18,7 +18,7 @@ export default function PageLayout({ children, activePage, authors, sourceUrl }:
         <Navigation activePage={activePage} />
         {children}
       </div>
-      <Footer authors={authors} sourceUrl={sourceUrl} />
+      <Footer authors={authors} sourceUrl={sourceUrl} centered={Boolean(activePage)} />
     </div>
   );
 }
