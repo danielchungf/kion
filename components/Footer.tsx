@@ -7,6 +7,7 @@ import LanguageToggle from "./LanguageToggle";
 interface FooterProps {
   authors?: Author[];
   sourceUrl?: string;
+  centered?: boolean;
 }
 
 function joinNames(names: string[], language: "en" | "es"): string {
@@ -15,15 +16,15 @@ function joinNames(names: string[], language: "en" | "es"): string {
   return `${names.slice(0, -1).join(", ")} ${conj} ${names[names.length - 1]}`;
 }
 
-export default function Footer({ authors, sourceUrl }: FooterProps) {
+export default function Footer({ authors, sourceUrl, centered = false }: FooterProps) {
   const language = getLanguage();
   const hasAuthors = authors && authors.length > 0;
   const recipeByPhrase = t("recipeBy", language);
   const [recipeWord, ...recipeByRest] = recipeByPhrase.split(" ");
   const recipeBySuffix = recipeByRest.join(" ");
   return (
-    <footer className="py-7 px-5 md:max-w-[720px] md:mx-auto md:px-0 text-left">
-      <div className="flex flex-col items-start gap-2 font-young-serif font-medium text-sm tracking-tight text-neutral-400 md:flex-row md:items-center md:justify-start">
+    <footer className={`py-7 px-5 md:max-w-[720px] md:mx-auto md:px-0 ${centered ? "text-center" : "text-left"}`}>
+      <div className={`flex flex-col gap-2 font-young-serif font-medium text-sm tracking-tight text-neutral-400 md:flex-row md:items-center ${centered ? "items-center md:justify-center" : "items-start md:justify-start"}`}>
         {hasAuthors && (
           <>
             <div className="flex items-center gap-2">
