@@ -42,6 +42,7 @@ export const ingredients: Ingredient[] = [
   { id: "108", name: "Evaporated Milk", nameEs: "Leche Evaporada", category: "Dairy", image: "/ingredients/evaporated-milk.webp" },
   { id: "45", name: "Feta Cheese", nameEs: "Queso Feta", category: "Dairy", image: "/ingredients/feta-cheese.webp" },
   { id: "68", name: "Flour", nameEs: "Harina", category: "Grains", image: "/ingredients/flour.webp" },
+  { id: "113", name: "French Bread", nameEs: "Pan Francés", category: "Grains", image: "/ingredients/pan-frances.webp" },
   { id: "18", name: "Garlic", nameEs: "Ajo", category: "Aromatics", image: "/ingredients/garlic.webp" },
   { id: "8", name: "Ginger", nameEs: "Kión", category: "Aromatics", image: "/ingredients/ginger.webp" },
   { id: "15", name: "Golden Curry", nameEs: "Golden Curry", category: "Pantry", image: "/ingredients/golden-curry.webp" },
