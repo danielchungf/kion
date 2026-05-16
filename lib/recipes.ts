@@ -6,10 +6,13 @@ import { Language, Recipe, RecipeBlock, RecipeContent, RecipeFrontmatter } from 
 const recipesDirectory = path.join(process.cwd(), "content/recipes");
 
 const SUBHEADING_RE = /^\*\*(.+?):?\*\*:?$/;
+const BULLET_RE = /^-\s+(.+)$/;
 
 function toBlock(text: string): RecipeBlock {
   const match = text.match(SUBHEADING_RE);
   if (match) return { kind: "subheading", text: match[1].trim() };
+  const bullet = text.match(BULLET_RE);
+  if (bullet) return { kind: "bullet", text: bullet[1].trim() };
   return { kind: "item", text };
 }
 
