@@ -18,7 +18,8 @@ export interface RecipeFrontmatter {
 
 export type RecipeBlock =
   | { kind: "subheading"; text: string }
-  | { kind: "item"; text: string };
+  | { kind: "item"; text: string }
+  | { kind: "bullet"; text: string };
 
 export interface RecipeContent {
   ingredients: RecipeBlock[];
